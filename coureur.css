@@ -1,0 +1,340 @@
+/*DEBUT DE LA FONT*/
+
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-ExtraLight.woff2') format('woff2'),
+		url('font/Nunito-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-ExtraBold.woff2') format('woff2'),
+		url('font/Nunito-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-ExtraLightItalic.woff2') format('woff2'),
+		url('font/Nunito-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-ExtraBoldItalic.woff2') format('woff2'),
+		url('font/Nunito-ExtraBoldItalic.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-Black.woff2') format('woff2'),
+		url('font/Nunito-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-Regular.woff2') format('woff2'),
+		url('font/Nunito-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-BoldItalic.woff2') format('woff2'),
+		url('font/Nunito-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-SemiBold.woff2') format('woff2'),
+		url('font/Nunito-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-SemiBoldItalic.woff2') format('woff2'),
+		url('font/Nunito-SemiBoldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-BlackItalic.woff2') format('woff2'),
+		url('font/Nunito-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-Bold.woff2') format('woff2'),
+		url('font/Nunito-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-LightItalic.woff2') format('woff2'),
+		url('font/Nunito-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-Italic.woff2') format('woff2'),
+		url('font/Nunito-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Nunito';
+	src: url('font/Nunito-Light.woff2') format('woff2'),
+		url('font/Nunito-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+/*FIN DE LA FONT*/
+
+
+
+/*DEBUT DU PRESET*/
+
+
+* {	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+html {
+	font-size:62.5% /* 1 rem pour 10px*/
+}
+
+body {
+	font-size: 1.5rem;
+	font-family: 'Nunito', sans-serif; /* 15px */
+	
+}
+
+a{
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+
+/*FIN DU PRESET*/
+
+/*DEBUT DU CONTAINER*/
+
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+/*DEBUT DU HEADER */
+
+
+header{
+	position: fixed;
+	top:0;
+	width: 100%;
+	height: 120px;
+	z-index: 2;
+	background:rgba(255,255,255,0.9);
+
+
+}
+
+header img {
+	width: 230px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	
+}
+
+nav {
+	display:inline-block;
+	width: 700px;
+	position: relative;
+	left:60px;
+	padding-bottom: 10px;
+}
+
+nav li {
+	display: inline-block;
+	padding: 10px;
+	margin-right: 20px;
+}
+
+nav li:nth-of-type(6){
+	margin-left: 120px;
+}
+
+nav a {
+	font-size: 17px;
+	color:#8c8c8c;
+}
+
+.creaFlecheBas {
+	width: 6px;
+	height: 6px;
+	border-bottom:1px solid grey;
+	border-right:1px solid grey;
+	transform: rotate(-45deg);
+	display: inline-block;
+}
+
+.soulignement {
+	margin-top: 4px;
+	width: 0%;
+	height: 3px;
+	background: #fdc300;
+	transition: all 0.3s ease-in-out;
+}
+
+a:hover .soulignement{
+	width: 100%;
+}
+
+
+
+/*DEBUT CONTAINER PRESENTATION COUREUR */
+
+
+.profilCoureur{
+		background: #ffd500;	
+		width: 100%;
+		height: 700px;
+		margin-top:120px;	
+		margin-bottom: 500px;
+	
+
+}
+
+.profilCoureur:before {
+	content:'';
+	display: block;	
+	left:150px;
+	background-image: url(image/coquard3.jpg);
+	background-position: left 450px top;
+	background-repeat: no-repeat;
+	background-size: cover;	
+	height: 100%;
+	widows: 50%;
+	opacity: 0.3;
+}
+
+
+
+.profilCoureur .blocGauche, .profilCoureur .blocDroit {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+.animation {
+	width:500px;
+	height:500px;
+	position: relative;
+	transform: rotate(45deg);
+	
+}
+	
+.container {
+	animation: scalator 10s;
+}
+.block {
+	width: 20px;
+	height: 100px;
+	display: inline-block;
+	border-radius: 25px;	
+	animation: test 1s infinite;
+
+}
+
+.rouge {
+	 background: red;
+}
+.orange {
+	 background: orange;
+	 height: 120px;
+	 animation-delay:0.1s;
+}
+.vert {
+	 background: green;
+	 height: 150px;
+	animation-delay:0.2s;
+}
+.bleu{
+	 background: blue;
+	  height: 180px;
+	  animation-delay:0.3s;
+
+}
+.violet{
+	 background: purple;
+	  height: 200px;
+	  animation-delay:0.4s;
+}
+
+@keyframes test {
+	0% {height:0px;}
+	25% {height:100px;}
+    50% {height: 150px}
+	75% {height:200px;}
+    100% {height: 0px}
+}
+
+
+@keyframes scalator{
+	0%{
+		transform:scale(0);
+	}
+	10%{
+		transform:scale(1);
+	}
+	90%{
+		transform:scale(1));
+	}
+	100%{
+		transform:scale(0);
+	}
+}

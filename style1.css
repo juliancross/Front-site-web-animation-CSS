@@ -114,11 +114,8 @@
 }
 
 
-/*FIN DE LA FONT*/
-
-
-
-/*DEBUT DU PRESET*/
+/*------------------------------------------FIN DE LA FONT*----------------------------------------------/
+/-------------------------------------------DEBUT DU PRESET---------------------------------------------*/
 
 
 * {	
@@ -135,8 +132,7 @@ html {
 
 body {
 	font-size: 1.5rem;
-	font-family: 'Nunito', sans-serif; /* 15px */
-	
+	font-family: 'Nunito', sans-serif; /* 15px */	
 }
 
 a{
@@ -151,11 +147,13 @@ li {
 	list-style-type: none;
 }
 
-
+h1,h2,h3,h4,h5,h6 {
+	font-weight:lighter;
+}
 
 /*------------------------------FIN DU PRESET----------------------------------------------*/
 
-/*DEBUT DU CONTAINER*/
+/*-------------------------------DEBUT DU CONTAINER-----------------------------------------*/
 
 
 .container {
@@ -163,13 +161,14 @@ li {
 	margin: 0 auto;
 }
 
-
-/*-----
---------------------------DEBUT DU HEADER-------------------------------------- */
+/*--------------------------DEBUT DU HEADER-------------------------------------- */
  
  header {
 	 width: 100%;
 	 padding-top:10px;
+	 position: fixed;
+	 background: rgba(255,255,255,0.9);
+	 z-index: 5;
  }
 
  header img{
@@ -240,12 +239,14 @@ a:hover .soulignement{
 	background-size: cover;
 	background-position: center;
 	width: 100%;
+	padding-top:110px;
 	padding-bottom: 100px;
 }
 
-.photo1Background h2{
+.photo1Background h1{
 	margin: 0;
 	font-size: 30px;
+	color:white;
 }		
 
 .photo1Background svg{
@@ -271,7 +272,6 @@ a:hover .soulignement{
 }
 .photo1Background li:nth-of-type(2){
 	padding-top: 1%;
-
 }
 
 .fondJaune {
@@ -280,7 +280,7 @@ a:hover .soulignement{
 	height: 500px;
 }
 
-.blocGauche{
+ .photo1Background .blocGauche{
 	display: inline-flex;
 	flex-flow: row wrap;
 	justify-content:flex-start;
@@ -289,16 +289,55 @@ a:hover .soulignement{
 	height: 500px;
 	vertical-align: top;
 	position: relative;
-
 }	
 
-.blocDroit{
-	display: inline-flex;;
+.photo1Background .fond{
+	background: #484848;
+	position: absolute;
+	bottom:0;
+	padding:10px;
+}
+
+.photo1Background h4{
+	color:white;
+}
+
+.photo1Background .blocGauche img {
+	width: 60px;
+	border-radius: 25%;
+	/*display: block;
+	margin:0 auto;	
+	margin-top: 30%;*/
+}
+
+.blocGauche .hautDroit, .blocGauche .basDroit {
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.blocGauche .hautDroit, .blocGauche .basDroit, .blocGauche .hautGauche, .blocGauche .basGauche {
+	transition: all 0.4s ease-in-out;
+}
+
+.blocGauche .hautDroit:hover, .blocGauche .basDroit:hover, .blocGauche .hautGauche:hover, .blocGauche .basGauche:hover {
+	transform: scale(0.8);
+	 opacity: 0.8;
+} 
+
+ .photo1Background .blocDroit{
+	display: inline-flex;
 	width: 47%;
 	height: 500px;
 	margin-left: 2.1%;
 	padding:2%;
+	transition: all 0.4s ease-in-out;
 }
+
+ .photo1Background .blocDroit:hover {
+	 transform: scale(0.8);
+	 opacity: 0.8;
+ }
 
 .photo{
 	background-repeat: no-repeat;
@@ -329,3 +368,651 @@ a:hover .soulignement{
 		top:0.7%;
 		left: 3%;
 }
+
+ .photo1Background .blocDroit .fond{
+	display: flex;
+	align-items: center;
+}
+
+.photo1Background .blocDroit img {
+	width: 25%;
+	margin: 0 10px;
+}
+
+/*--------------------------DEBUT DE LEQUIPE-------------------------------------- */
+.equipe .fleche {
+	display:flex;
+	position: relative;
+	top:200px;
+	margin: 0 -20px;
+}
+
+.equipe .flecheJaune {
+	background: #ffd500;
+	width: 30px;
+	height: 30px;
+	border-radius:50%;
+}
+.equipe .flecheJaune:last-child {
+	position:absolute;
+	right:0;		
+}
+
+.equipe .flecheJaune::after {
+	content:'';
+	display: block;
+	width: 10px;
+	height: 10px;	
+	border-bottom:2px solid grey;
+	border-right:2px solid grey;
+	position: relative;
+	left:8px;
+	top:8px;	
+}
+
+.equipe .flecheJaune:first-child::after{
+	transform: rotate(135deg);
+	left: 10px;
+}
+
+.equipe .flecheJaune:last-child::after{
+	transform: rotate(-45deg);
+}
+
+.equipe ul{
+	display: flex;
+	justify-content: space-around;
+}
+
+.equipe li {
+	transition: all 0.3s ease-in-out;
+}
+
+
+.equipe h4{
+	font-size:18px;
+	color:grey;
+	position: relative;
+	top:15px;
+	text-align: center;
+}
+
+.equipe img{
+	border:6px solid #ffd500;
+	border-radius:50%;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.equipe img:hover {
+	border: 6px solid grey;
+}
+
+.equipe li:hover{
+	transform: scale(0.8);
+
+}
+
+/*--------------------------BACKGROUND2-------------------------------------- */
+
+.background2 {
+	background-image: url(image/courreurMirror.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+	width:100%;
+	height: 530px;
+	margin-top:70px;
+}
+
+.background2 article {
+	display: flex;
+}
+
+.background2 h1 {
+	color:white;
+}
+
+.background2 .blocGauche {
+	padding-left:30px;
+	width: 50%;
+}
+
+article .barreJaune{
+	margin-bottom: 40px;
+}
+
+.background2 .blocDroit {
+	width: 50%;	
+	margin-left:60px;
+}
+
+
+.ensemble1{
+	display: flex;	
+	flex-wrap: wrap;		
+}
+ 
+.ensemble1 .carre{
+	transition: all 0.5s ease-in-out;
+	text-align: center;
+	padding-top:20px;
+}
+
+.ensemble1 .carre:hover{
+	transform: scale(0.8);
+}
+
+.ensemble1 h4 {
+	color: grey;
+}
+
+.ensemble1 h4::after {
+	content:'';
+	display: block;
+	width: 160px;
+	height: 3px;
+	background: grey;
+	margin-top:15px;
+	margin-left:15px;
+}
+
+.carre	 {
+	width: 190px;
+	height: 190px;
+	margin:5px;
+	background: #ffd500;
+}
+
+.ensemble2 {
+	display: flex;	
+	flex-wrap: wrap;
+	background: #ffd500;
+	width: 400px;
+	margin-bottom: 15px;
+}
+
+.blocDroit h1{
+	margin-bottom: 25px;
+}
+
+.ensemble2 .carre {
+	width: 190px;
+	height: 152px;
+	margin:5px;
+	background-image: url(image/coquard3.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
+	position: relative;	
+	overflow:hidden;
+	display: flex;	
+	justify-content: center;
+	align-items: center;	
+}
+
+.ensemble2 img {
+	width: 40%;
+}
+
+.background2 .ensemble1 > div {
+	padding-top:20px;
+	text-align: center;
+}
+
+.ensemble2 h4 {
+	font-size: 14px;
+}
+
+.ensemble2 p{
+	font-size: 12px;
+}
+
+.ensemble2 .fond{
+	background: #484848;
+	position:absolute;
+	bottom:0px;
+	padding: 8px;
+	color:white;
+}
+
+.ensemble2 .fond h4:first-child{
+	margin-bottom: 10px;
+}
+
+.carre:first-child .fond{
+	bottom:-50px;
+	transition: all 0.5s ease-in-out;	
+}
+
+.carre:first-child:hover .fond{
+	bottom:0px;
+}
+
+.barreChargement{
+	background: #ffd500;
+	color:grey;
+	width: 400px;
+	height:50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items:center;	
+	transition: all 0.3s ease-in-out;
+}
+
+.barreChargement::before{
+	content: '';
+	display: block;
+	background: #484848;
+	width: 0%;
+	height:100%;
+	z-index: 2;
+	position: absolute;
+	left:0;	
+	transition: all 0.3s ease-in-out;
+}
+
+.barreChargement:hover{
+	color:white;
+}
+
+.barreChargement:hover::before{
+	width: 100%;
+}
+
+.barreChargement h4 {
+	z-index: 2;
+	font-size: 24px;	
+	position:relative;
+}
+
+.barreChargement h4::after, .barreChargement h4::before {
+	content:'';
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-bottom:2px solid grey;
+	border-right:2px solid grey;
+	position: absolute;
+	top:5px;
+	left:200px;
+	transform: rotate(-45deg);
+	transition: all 0.3s ease-in-out;
+}
+.barreChargement h4::before {
+	left:220px;
+	
+}
+
+.barreChargement:hover h4::after, .barreChargement:hover h4::before {
+	border-color:white;
+}
+
+
+/*--------------------------SECTION INFORMATION-------------------------------------- */
+/*--------------------------SECTION INFORMATION bloc gauche-------------------------------------- */
+
+.information {
+	padding-bottom: 30px;
+}
+
+.information article{
+	display:flex;
+	margin-top: 20px;	
+}
+
+.information .blocGauche {
+	width: 50%;
+	margin-left: 40px;
+}
+
+.information .blocDroit {
+	margin-left: 30px;
+	width: 40%;
+}
+
+.information a {
+	display: inline-flex;	
+	margin-bottom: 10px;	
+}
+
+.information .date h4 {
+	background: #ffd500;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+}
+
+.information .date h3 {
+	text-align: center;
+	padding:10px;
+	border: 1px solid rgba(220,220,220,0.6);
+}
+
+
+.information .info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:  rgba(220,220,220,0.3);
+	position: relative;
+	padding-right:100px;
+}
+
+.information .info >h3 {
+	margin-left:20px;
+	
+}
+
+.information .info h3::after {
+	content:'';
+	display: block;
+	width: 15px;
+	height: 15px;
+	border-bottom:2px solid grey;
+	border-right:2px solid grey;
+	transform: rotate(-45deg);
+	position: absolute;
+	left:340px;
+	bottom:25px;
+}
+
+.information .gene img {
+	width: 10%;
+}
+
+.information .blocGauche .basDeTexte{
+	color: grey;
+	text-decoration: underline;
+	margin-left:310px;
+	
+}
+
+/*--------------------------SECTION INFORMATION-------------------------------------- */
+/*--------------------------SECTION INFORMATION bloc droit-------------------------------------- */
+
+.information .blocDroit {
+	background-image: url(image/bg-zoom.png);
+	background-repeat: no-repeat;
+	background-position: right top 20px;	
+}
+
+.information .zoom {
+	width: 100%;		
+}
+
+.information .blocDroit p {
+	margin-bottom: 32px;
+}
+
+.information .blocDroit .basDeTexte{
+	color: grey;
+	text-decoration: underline;
+	margin-left:270px;
+}
+
+/*--------------------------SECTION CHIFFRE CLES-------------------------------------- */
+
+.chiffreCles {
+	background-color: rgba(220,220,220,0.3);
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.chiffreCles .haut{
+	padding: 20px;
+	display:flex;
+	align-items: center;
+}
+
+.chiffreCles img {
+	margin: 0 100px 0 30px
+}
+
+.chiffreCles h3 {
+	font-weight: bold;
+	z-index: 2; 	
+	border-bottom: 4px solid #ffd500;
+	padding: 0 20px 10px 20px;	
+}
+
+.chiffreCles .bas {
+	display: flex;
+}
+
+.chiffreCles .bas .gauche {
+	width: 50%;
+	background: white;
+	margin-left:60px;
+	margin-right: 100px;
+	padding: 25px;
+	border: 1px solid rgba(220,220,220,0.7);
+}
+
+.chiffreCles .bas .gauche p{
+	padding: 5px;
+}
+.chiffreCles .bas .gauche span {
+	font-weight: bold;
+}
+
+.chiffreCles .bas .droite {	
+	width: 50%;
+	background: white;
+	padding: 25px;
+	border: 1px solid rgba(220,220,220,0.7);
+}
+
+.chiffreCles .bas .droite >p {
+	text-align: center;
+	font-weight: bold;
+}
+
+.chiffreCles .bas .droite a{
+	text-align: center;
+	margin-top:30px;
+	color:black;
+	
+}
+.chiffreCles .bas .droite a p {
+	background: #ffd500;
+	padding: 20px 20px 20px 20px;	
+	border-radius:40%;
+	width: 240px;	
+	margin-top:30px;
+	margin-left: 70px;
+	transition:all 0.3s ease-in-out;
+
+}
+
+.chiffreCles .bas .droite a:hover p {
+	transform: scale(1.2);
+}
+
+.pdg {
+	background: #484848;
+	padding-bottom: 20px;
+}
+
+.pdg article {
+	display: flex;
+	padding: 20px;
+	position: relative;
+	left:10px;	
+}
+
+.pdg h2{
+	color:white;
+}
+
+.pdg p {
+	color:white;
+	margin-bottom: 20px;
+}
+
+.pdg h4 {
+	color:#ffd500;
+	margin-bottom: 20px;
+}
+
+.pdg img{
+	width: 25%;
+	margin-right: 30px;
+}
+
+.pdg a {
+	position: absolute;
+	left:360px;
+	font-size: 18px;
+	color:#ffd500;
+	padding: 5px;
+	border: 1px solid #ffd500;
+}
+
+.pdg .persoGauche {
+	width: 50%;
+	margin-right:30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.pdg .persoDroite {
+	position: relative;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+
+/*--------------------------SECTION DERNIER BANDEAU------------------------------------------------------------- */
+
+
+.dernierBandeau {
+	background-image:url(image/bg_footer_courreur_mirror-2.jpg);
+	height: 150px;
+	background-position: bottom 40px;
+	color:white;
+	padding-left: 130px;
+	border-bottom:5px solid #ffd500;	
+}
+
+.dernierBandeau .barreJaune {
+	margin-bottom: 40px;
+}
+
+.dernierBandeau h1 {
+	margin-bottom: 30px;
+}
+.dernierBandeau ul {
+	display: flex;	
+}
+
+.dernierBandeau ul img {
+	width: 10%;	
+}
+
+.dernierBandeau ul li:first-child{
+	width: 42%;	
+}
+
+.mention {
+	background: #3b3b39	;
+	padding-bottom: 30px;
+}
+
+ .mention h4 {
+	 color:white;
+	 padding: 20px;
+	 text-align: center;
+	 font-size:16px;
+ }
+
+.fin {
+	background: black;
+	width: 100%;	
+	z-index:5;
+	position: fixed;
+	bottom:0;
+}
+
+.fin .container{
+	display: flex;
+	padding-top: 10px;
+	padding-left: 40px;
+}
+
+.fin h6 {
+	color: white;
+	text-align: center;
+	padding:10px;
+	font-size: 11px;
+}
+
+.ok h6 {
+	display: inline-flex;
+	padding:4px 6px; 
+	color:#ffd500;
+	background: black;
+	border:1px solid #ffd500;
+	position: relative;
+	top:5px;	
+}
+
+/*-------------------------------------------ELEMENT FIXED-------------------------------------*/
+
+.positionFixe {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	left:20px;
+	top:120px;
+	z-index: 100;
+}
+.positionFixe h5{
+	text-align: center;
+}
+.positionFixe a {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background: #ffd500;
+	margin-top: 3px;	
+	transition: all 0.4s ease-in-out;	
+}
+
+.positionFixe a:hover{
+	transform: scale(1.2);
+}
+
+.positionFixe svg {
+	width: 30px;
+}
+
+.flecheRemontante{
+	width: 40px;
+	height: 40px;
+	background: black;
+	border:3px solid #ffd500;
+	border-radius:50%;	
+	position: fixed;
+	top:570px;
+	right:25px;
+	z-index:100;
+}
+
+.flecheRemontante::after{
+	content:'';
+	display: block;
+	width: 15px;
+	height: 15px;	
+	border-bottom:2px solid #ffd500;
+	border-right:2px solid #ffd500;
+	transform: rotate(225deg);
+	position: relative;
+	top:12px;
+	left:9px;	
+}
+

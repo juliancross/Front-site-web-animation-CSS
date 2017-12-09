@@ -380,17 +380,20 @@
 
   60% {
     opacity: 1;
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(25px, 0, 0);
   }
 
   75% {
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0);
   }
 
   to {
-    transform: translate3d(10px, 0, 0);
+    transform: none;
   }
-
 }
 
 .bounceInLeft {
@@ -409,17 +412,20 @@
 
   60% {
     opacity: 1;
-    transform: translate3d(10px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
   }
 
   75% {
     transform: translate3d(10px, 0, 0);
   }
 
-to  {
-    transform: translate3d(10px, 0, 0);
+  90% {
+    transform: translate3d(-5px, 0, 0);
   }
 
+  to {
+    transform: none;
+  }
 }
 
 .bounceInRight {
@@ -438,13 +444,16 @@ to  {
 
   60% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, -20px, 0);
   }
 
   75% {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 10px, 0);
   }
 
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
 
   to {
     transform: translate3d(0, 0, 0);
